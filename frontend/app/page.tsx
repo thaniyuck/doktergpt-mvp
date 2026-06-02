@@ -2,6 +2,12 @@
 
 import { useState } from "react";
 
+import Sidebar from "@/components/sidebar";
+import TopBar from "@/components/topbar";
+import ChatArea from "@/components/chatarena";
+import EvidencePanel from "@/components/evidencepanel";
+import ChatInput from "@/components/chatinput";
+
 export default function Home() {
   const [query, setQuery] = useState("");
   const [answer, setAnswer] = useState("");
@@ -9,75 +15,46 @@ export default function Home() {
   const [latency, setLatency] = useState(0);
 
   const askDokterGPT = async () => {
-    try {
-      const res = await fetch(
-        "http://127.0.0.1:8000/ask",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            query,
-          }),
-        }
-      );
+    const res = await fetch(
+      "http://127.0.0.1:8000/ask",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ query }),
+      }
+    );
 
-      const data = await res.json();
+    const data = await res.json();
 
-      setAnswer(data.answer);
-      setSources(data.sources);
-      setLatency(data.latency);
-    } catch {
-      setAnswer("Backend unavailable.");
-    }
+    setAnswer(data.answer);
+    setSources(data.sources);
+    setLatency(data.latency);
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-white p-8">
-      <h1 className="text-3xl font-bold mb-6">
-        DokterGPT MVP
-      </h1>
+    <div className="bg-background text-on-surface">
+      <Sidebar />
+      <TopBar />
 
-      <textarea
-        className="w-full border p-4 rounded text-black"
-        rows={4}
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
+      <main className="ml-[280px] pt-16 h-screen flex overflow-hidden">
+        <ChatArea 
+        query={query}
+        answer={answer} 
+        />
+
+        <EvidencePanel
+          sources={sources}
+          latency={latency}
+        />
+      </main>
+
+      <ChatInput
+        query={query}
+        setQuery={setQuery}
+        askDokterGPT={askDokterGPT}
       />
-
-      <button
-        onClick={askDokterGPT}
-        className="mt-4 px-4 py-2 bg-blue-600 rounded"
-      >
-        Ask
-      </button>
-
-      <div className="mt-8">
-        <h2 className="font-bold">Answer</h2>
-        <p>{answer}</p>
-      </div>
-
-      <div className="mt-8">
-        <h2 className="font-bold">
-          Latency: {latency}s
-        </h2>
-      </div>
-
-      <div className="mt-8">
-        <h2 className="font-bold">Sources</h2>
-
-        {sources.map((s, i) => (
-          <div
-            key={i}
-            className="border p-3 my-2 rounded"
-          >
-            <p>{s.title}</p>
-            <p>{s.doi}</p>
-            <p>{s.score}</p>
-          </div>
-        ))}
-      </div>
     </div>
   );
 }
