@@ -1,0 +1,349 @@
+query_id,query,relevant_papers,category
+1,What are the outcomes of early hemodialysis initiation in patients with stage III leptospirosis-induced acute kidney injury (AKI)?,PPR_52eb6bd9,direct
+2,Does starting renal replacement therapy early improve survival and prevent uremic complications in severe leptospirosis-associated kidney failure?,PPR_52eb6bd9,paraphrase
+3,Apakah cuci darah lebih awal dapat membantu pasien leptospirosis berat yang mengalami gagal ginjal akut?,PPR_52eb6bd9,user_style
+4,What strategies have been studied for reducing dengue transmission in Indonesia?,"""PPR_266c2319"", ""PPR_ccbb1612"", ""PPR_8c18c874"", ""PPR_10ed5dac""",multi_papers
+5,"What is the effect of combining acupuncture therapy and turmeric (Curcuma longa Linn) on total protein, albumin, and globulin levels in osteoarthritis patients?",PPR_84933f22,direct
+6,Does adding turmeric herbal treatment to acupuncture improve blood protein profiles compared with acupuncture alone in patients with osteoarthritis?,PPR_84933f22,paraphrase
+7,Apakah kombinasi akupunktur dan kunyit dapat membantu memperbaiki kondisi penderita osteoartritis berdasarkan hasil pemeriksaan protein darah?,PPR_84933f22,user_style
+8,What are the challenges and interventions for tuberculosis control and treatment success in Indonesia?,"""PPR_c58e2d63"", ""PPR_2be79c3c"", ""PPR_6719d457""",multi_papers
+9,How does HELLP syndrome affect maternal and neonatal outcomes among women with preeclampsia in Indonesia?,PPR_3fe971e2,direct
+10,"What additional risks of maternal complications, preterm birth, fetal death, and neonatal mortality are associated with HELLP syndrome compared with preeclampsia alone?",PPR_3fe971e2,paraphrase
+11,Apakah ibu hamil dengan preeklamsia yang mengalami sindrom HELLP memiliki risiko lebih tinggi mengalami komplikasi serius bagi ibu dan bayinya?,PPR_3fe971e2,user_style
+12,How does diabetes affect health outcomes and its relationship with other diseases in Indonesia?,"""PPR_2620bb35"", ""PPR_0df42fce"", ""PPR_c0cfeb7e""",multi_papers
+13,"Does stunting modify the relationship between early childhood caries, salivary factors, and oral health-related quality of life among preschool children?",PPR_97f3e130,direct
+14,"How do stunting status, dental caries severity, salivary pH, and buffering capacity interact in influencing oral health quality of life in young children?",PPR_97f3e130,paraphrase
+15,Apakah anak yang mengalami stunting lebih rentan mengalami gangguan kualitas hidup akibat gigi berlubang dan kondisi air liur yang kurang baik?,PPR_97f3e130,user_style
+16,What evidence exists regarding maternal health and pregnancy-related complications?,"""PPR_a5e6e48b"", ""PPR_30a00516"", ""PPR_49652a10""",multi_papers
+17,How should anticoagulation be managed perioperatively in a pregnant patient with a mechanical mitral valve undergoing cesarean section?,PPR_751ec67b,direct
+18,What are the outcomes of temporarily discontinuing warfarin and using heparin bridging therapy for surgery in patients with mechanical heart valves?,PPR_751ec67b,paraphrase
+19,Bagaimana cara mengatur obat pengencer darah pada ibu hamil dengan katup jantung buatan yang akan menjalani operasi caesar?,PPR_751ec67b,user_style
+20,What research has been conducted on cardiovascular health and cardiovascular risk factors?,"""PPR_d76ba0d2"", ""PPR_68ea4ec8"", ""PPR_375c6bf6""",multi_papers
+21,"What were the prevalence, patient characteristics, and risk factors associated with COVID-19 reinfection at Dr. Moewardi General Hospital between March 2020 and June 2021?",PPR_d51d3e82,direct
+22,"Which demographic and clinical factors were commonly observed among patients who experienced a second SARS-CoV-2 infection, and how long was the interval between infections?",PPR_d51d3e82,paraphrase
+23,"Siapa yang lebih berisiko terkena COVID-19 untuk kedua kalinya, dan berapa lama biasanya jarak antara infeksi pertama dan infeksi ulang?",PPR_d51d3e82,user_style
+24,What evidence exists regarding mosquito-borne disease prevention and control in Indonesia?,"""PPR_266c2319"", ""PPR_ccbb1612"", ""PPR_aefd2b91"", ""PPR_4ed6c579""",multi_papers
+25,"What are the characteristic MRI findings of Lhermitte-Duclos disease, and how does the ‘tiger stripe’ sign aid in diagnosis?",PPR_bfbc8fcb,direct
+26,How can magnetic resonance imaging differentiate dysplastic cerebellar gangliocytoma (Lhermitte-Duclos disease) from other cerebellar tumors such as medulloblastoma?,PPR_bfbc8fcb,paraphrase
+27,"Apa arti pola “garis-garis seperti belang harimau” pada hasil MRI otak, dan bagaimana pola tersebut membantu mendiagnosis tumor otak langka Lhermitte-Duclos?",PPR_bfbc8fcb,user_style
+28,"What is the relationship between age, gender, and the incidence of type 2 diabetes mellitus among patients at Bhayangkara Pusdik Brimob Watukosek Hospital?",PPR_2620bb35,direct
+29,"How strongly does being 45 years or older increase the risk of developing type 2 diabetes, and does sex significantly influence diabetes occurrence?",PPR_2620bb35,paraphrase
+30,"Apakah orang berusia di atas 45 tahun memiliki risiko lebih tinggi terkena diabetes tipe 2 dibandingkan yang lebih muda, dan apakah risiko tersebut berbeda antara pria dan wanita?",PPR_2620bb35,user_style
+31,"Among Indonesian current smokers, how are knowledge of smoking-related diseases and exposure to anti-smoking advertising associated with smoking cessation intention according to the 2021 Global Adult Tobacco Survey (GATS) Indonesia?",PPR_92d9bd08,direct
+32,"What factors influence Indonesian smokers' intention to quit smoking, and what roles do disease-specific health knowledge and exposure to anti-smoking messages across different media channels play in predicting quit intentions?",PPR_92d9bd08,paraphrase
+33,Apakah pengetahuan tentang bahaya rokok dan iklan antirokok membuat perokok di Indonesia lebih ingin berhenti merokok? Media apa yang paling berpengaruh?,PPR_92d9bd08,user_style
+34,"What were the trends, country-specific burdens, and major risk factors of head and neck cancers in G20 countries from 1990 to 2023, according to the Global Burden of Disease 2023 analysis?",PPR_fffc4546,direct
+35,"How has the epidemiological burden of head and neck cancer subtypes changed across G20 nations over the past three decades, which countries experienced the highest burdens and fastest changes, and what roles do tobacco and alcohol play in these patterns?",PPR_fffc4546,paraphrase
+36,"Negara G20 mana yang memiliki kasus kanker kepala dan leher tertinggi, bagaimana tren penyakit ini sejak 1990, dan apakah merokok serta konsumsi alkohol menjadi penyebab utamanya?",PPR_fffc4546,user_style
+37,"What were the efficacy and long-term safety outcomes of the tetravalent dengue vaccine in children aged 2–16 years, particularly regarding symptomatic dengue and hospitalization for virologically confirmed dengue?",PPR_10ed5dac,direct
+38,"How effective was the dengue vaccine at preventing dengue infection, and did long-term follow-up reveal any age-related differences in the risk of hospitalization or severe dengue among vaccinated children?",PPR_10ed5dac,paraphrase
+39,"Apakah vaksin dengue ini efektif mencegah demam berdarah pada anak-anak, dan apakah ada risiko efek samping serius atau rawat inap setelah vaksinasi, terutama pada anak di bawah 9 tahun?",PPR_10ed5dac,user_style
+40,Which methodologies are most effective when investigating Algorithm Traumatic Brain?,PPR_17a2088b,direct
+41,How do medical professionals approach the diagnosis or intervention for Algorithm Traumatic Brain?,PPR_17a2088b,paraphrase
+42,"Menurut studi kesehatan, seberapa bahaya atau efektifkah Algorithm Traumatic Brain?",PPR_17a2088b,user_style
+43,How does current research evaluate the effectiveness of Highsensitivity electrochemical immunosensor?,PPR_f8a64b81,direct
+44,How do medical professionals approach the diagnosis or intervention for Highsensitivity electrochemical immunosensor?,PPR_f8a64b81,paraphrase
+45,Apa saja gejala atau hasil klinis yang biasanya terjadi pada kasus Highsensitivity electrochemical immunosensor?,PPR_f8a64b81,user_style
+46,What are the main risk factors and clinical presentations of world malaria Plasmodium?,PPR_04b85108,direct
+47,Is there documented evidence showing how world malaria Plasmodium affects health outcomes?,PPR_04b85108,paraphrase
+48,Adakah hubungan langsung antara world malaria Plasmodium dengan tingkat kesembuhan pasien?,PPR_04b85108,user_style
+49,What are the main risk factors and clinical presentations of Major Burden Severe?,PPR_6f0b6b1e,direct
+50,What does the data say about the relationship between Major Burden Severe and patient recovery?,PPR_6f0b6b1e,paraphrase
+51,Apa saja gejala atau hasil klinis yang biasanya terjadi pada kasus Major Burden Severe?,PPR_6f0b6b1e,user_style
+52,How does current research evaluate the effectiveness of bacteriological profile culturenegative?,PPR_d20717b4,direct
+53,Can you summarize the medical consensus on treating or managing bacteriological profile culturenegative?,PPR_d20717b4,paraphrase
+54,Apa saja gejala atau hasil klinis yang biasanya terjadi pada kasus bacteriological profile culturenegative?,PPR_d20717b4,user_style
+55,What are the main risk factors and clinical presentations of Peptide drugs obesity?,PPR_a67c49ab,direct
+56,How do medical professionals approach the diagnosis or intervention for Peptide drugs obesity?,PPR_a67c49ab,paraphrase
+57,Tindakan apa yang paling disarankan oleh dokter untuk menangani Peptide drugs obesity?,PPR_a67c49ab,user_style
+58,How does current research evaluate the effectiveness of Burden Trends Common?,PPR_58086356,direct
+59,Does recent literature support the use of specific interventions for Burden Trends Common?,PPR_58086356,paraphrase
+60,Apa saja gejala atau hasil klinis yang biasanya terjadi pada kasus Burden Trends Common?,PPR_58086356,user_style
+61,Which methodologies are most effective when investigating ImmuneRelated Adverse Events?,PPR_076be8b3,direct
+62,What does the data say about the relationship between ImmuneRelated Adverse Events and patient recovery?,PPR_076be8b3,paraphrase
+63,Apa saja gejala atau hasil klinis yang biasanya terjadi pada kasus ImmuneRelated Adverse Events?,PPR_076be8b3,user_style
+64,What are the primary clinical outcomes associated with REPLICATION EFFICIENCY DENGUE?,PPR_8fcd83be,direct
+65,What does the data say about the relationship between REPLICATION EFFICIENCY DENGUE and patient recovery?,PPR_8fcd83be,paraphrase
+66,Adakah hubungan langsung antara REPLICATION EFFICIENCY DENGUE dengan tingkat kesembuhan pasien?,PPR_8fcd83be,user_style
+67,Which methodologies are most effective when investigating Adverse Pregnancy Outcomes?,PPR_11e1dc0a,direct
+68,Does recent literature support the use of specific interventions for Adverse Pregnancy Outcomes?,PPR_11e1dc0a,paraphrase
+69,Adakah hubungan langsung antara Adverse Pregnancy Outcomes dengan tingkat kesembuhan pasien?,PPR_11e1dc0a,user_style
+70,Which methodologies are most effective when investigating Amnion mesenchymal stem?,PPR_92cd8911,direct
+71,What does the data say about the relationship between Amnion mesenchymal stem and patient recovery?,PPR_92cd8911,paraphrase
+72,Adakah hubungan langsung antara Amnion mesenchymal stem dengan tingkat kesembuhan pasien?,PPR_92cd8911,user_style
+73,What is the statistical significance and impact of Behavioral Intervention Prevent on patient health?,PPR_7e6e2f93,direct
+74,Does recent literature support the use of specific interventions for Behavioral Intervention Prevent?,PPR_7e6e2f93,paraphrase
+75,Adakah hubungan langsung antara Behavioral Intervention Prevent dengan tingkat kesembuhan pasien?,PPR_7e6e2f93,user_style
+76,How does current research evaluate the effectiveness of Leprosy dystrophy twenty?,PPR_4e490844,direct
+77,How do medical professionals approach the diagnosis or intervention for Leprosy dystrophy twenty?,PPR_4e490844,paraphrase
+78,Adakah hubungan langsung antara Leprosy dystrophy twenty dengan tingkat kesembuhan pasien?,PPR_4e490844,user_style
+79,What are the main risk factors and clinical presentations of Outcomes subsequent pregnancy?,PPR_b68775b2,direct
+80,Can you summarize the medical consensus on treating or managing Outcomes subsequent pregnancy?,PPR_b68775b2,paraphrase
+81,Tindakan apa yang paling disarankan oleh dokter untuk menangani Outcomes subsequent pregnancy?,PPR_b68775b2,user_style
+82,What are the primary clinical outcomes associated with evaluation health systems?,PPR_d9991bac,direct
+83,Can you summarize the medical consensus on treating or managing evaluation health systems?,PPR_d9991bac,paraphrase
+84,Tindakan apa yang paling disarankan oleh dokter untuk menangani evaluation health systems?,PPR_d9991bac,user_style
+85,What are the key findings regarding Forestgoers heterogeneous population in recent studies?,PPR_bc8aed42,direct
+86,Is there documented evidence showing how Forestgoers heterogeneous population affects health outcomes?,PPR_bc8aed42,paraphrase
+87,"Menurut studi kesehatan, seberapa bahaya atau efektifkah Forestgoers heterogeneous population?",PPR_bc8aed42,user_style
+88,Which methodologies are most effective when investigating Immunoregulatory Imbalance Preeclampsia?,PPR_fd01adc2,direct
+89,How do medical professionals approach the diagnosis or intervention for Immunoregulatory Imbalance Preeclampsia?,PPR_fd01adc2,paraphrase
+90,Bagaimana pandangan medis mengenai efek dari Immunoregulatory Imbalance Preeclampsia terhadap pasien?,PPR_fd01adc2,user_style
+91,How does current research evaluate the effectiveness of quasiexperimental fortified tempeh?,PPR_4a93f6fe,direct
+92,What does the data say about the relationship between quasiexperimental fortified tempeh and patient recovery?,PPR_4a93f6fe,paraphrase
+93,Tindakan apa yang paling disarankan oleh dokter untuk menangani quasiexperimental fortified tempeh?,PPR_4a93f6fe,user_style
+94,What are the primary clinical outcomes associated with Comparative Association Basal?,PPR_f9dae6d5,direct
+95,Are there any notable complications or benefits linked to Comparative Association Basal?,PPR_f9dae6d5,paraphrase
+96,Apa saja gejala atau hasil klinis yang biasanya terjadi pada kasus Comparative Association Basal?,PPR_f9dae6d5,user_style
+97,What are the key findings regarding Safety Immunogenicity Transmissibility in recent studies?,PPR_b3553abb,direct
+98,Is there documented evidence showing how Safety Immunogenicity Transmissibility affects health outcomes?,PPR_b3553abb,paraphrase
+99,Bagaimana pandangan medis mengenai efek dari Safety Immunogenicity Transmissibility terhadap pasien?,PPR_b3553abb,user_style
+100,What is the statistical significance and impact of Health system quality on patient health?,PPR_3c56fba0,direct
+101,Is there documented evidence showing how Health system quality affects health outcomes?,PPR_3c56fba0,paraphrase
+102,"Menurut studi kesehatan, seberapa bahaya atau efektifkah Health system quality?",PPR_3c56fba0,user_style
+103,Which methodologies are most effective when investigating Spatiotemporal Characterization Dengue?,PPR_e82a7f3b,direct
+104,Does recent literature support the use of specific interventions for Spatiotemporal Characterization Dengue?,PPR_e82a7f3b,paraphrase
+105,Bagaimana pandangan medis mengenai efek dari Spatiotemporal Characterization Dengue terhadap pasien?,PPR_e82a7f3b,user_style
+106,What is the statistical significance and impact of Determining Risk Factors on patient health?,PPR_e4e4d74e,direct
+107,What does the data say about the relationship between Determining Risk Factors and patient recovery?,PPR_e4e4d74e,paraphrase
+108,Bagaimana pandangan medis mengenai efek dari Determining Risk Factors terhadap pasien?,PPR_e4e4d74e,user_style
+109,Which methodologies are most effective when investigating Advancements challenges personalized?,PPR_f6adf40b,direct
+110,Can you summarize the medical consensus on treating or managing Advancements challenges personalized?,PPR_f6adf40b,paraphrase
+111,Apa saja gejala atau hasil klinis yang biasanya terjadi pada kasus Advancements challenges personalized?,PPR_f6adf40b,user_style
+112,What are the main risk factors and clinical presentations of Automated reporting primaquine?,PPR_05d342af,direct
+113,How do medical professionals approach the diagnosis or intervention for Automated reporting primaquine?,PPR_05d342af,paraphrase
+114,Apakah ada penelitian terbaru yang membahas tentang Automated reporting primaquine di Indonesia?,PPR_05d342af,user_style
+115,What is the statistical significance and impact of Factors associated testing on patient health?,PPR_4207d007,direct
+116,Is there documented evidence showing how Factors associated testing affects health outcomes?,PPR_4207d007,paraphrase
+117,Bagaimana pandangan medis mengenai efek dari Factors associated testing terhadap pasien?,PPR_4207d007,user_style
+118,Which methodologies are most effective when investigating Characteristics mortality children?,PPR_1d07f23c,direct
+119,What does the data say about the relationship between Characteristics mortality children and patient recovery?,PPR_1d07f23c,paraphrase
+120,Tindakan apa yang paling disarankan oleh dokter untuk menangani Characteristics mortality children?,PPR_1d07f23c,user_style
+121,What is the statistical significance and impact of CostEffectiveness Mass Vaccination on patient health?,PPR_334efbb7,direct
+122,Does recent literature support the use of specific interventions for CostEffectiveness Mass Vaccination?,PPR_334efbb7,paraphrase
+123,Apa saja gejala atau hasil klinis yang biasanya terjadi pada kasus CostEffectiveness Mass Vaccination?,PPR_334efbb7,user_style
+124,What is the statistical significance and impact of Maternal perinatal outcomes on patient health?,PPR_416e5088,direct
+125,Is there documented evidence showing how Maternal perinatal outcomes affects health outcomes?,PPR_416e5088,paraphrase
+126,Apakah ada penelitian terbaru yang membahas tentang Maternal perinatal outcomes di Indonesia?,PPR_416e5088,user_style
+127,How does current research evaluate the effectiveness of Exclusive Breastfeeding Protects?,PPR_7da3caaa,direct
+128,How do medical professionals approach the diagnosis or intervention for Exclusive Breastfeeding Protects?,PPR_7da3caaa,paraphrase
+129,Tindakan apa yang paling disarankan oleh dokter untuk menangani Exclusive Breastfeeding Protects?,PPR_7da3caaa,user_style
+130,Which methodologies are most effective when investigating Biofilm formation antibiotic?,PPR_36e42994,direct
+131,How do medical professionals approach the diagnosis or intervention for Biofilm formation antibiotic?,PPR_36e42994,paraphrase
+132,Adakah hubungan langsung antara Biofilm formation antibiotic dengan tingkat kesembuhan pasien?,PPR_36e42994,user_style
+133,How does current research evaluate the effectiveness of Exploring Factors Related?,PPR_5d0f652a,direct
+134,How do medical professionals approach the diagnosis or intervention for Exploring Factors Related?,PPR_5d0f652a,paraphrase
+135,Apakah ada penelitian terbaru yang membahas tentang Exploring Factors Related di Indonesia?,PPR_5d0f652a,user_style
+136,What is the statistical significance and impact of Advanced NeedleBased Strategies on patient health?,PPR_0deb4c9c,direct
+137,How do medical professionals approach the diagnosis or intervention for Advanced NeedleBased Strategies?,PPR_0deb4c9c,paraphrase
+138,Tindakan apa yang paling disarankan oleh dokter untuk menangani Advanced NeedleBased Strategies?,PPR_0deb4c9c,user_style
+139,How does current research evaluate the effectiveness of Risk factors stunting?,PPR_0ead318d,direct
+140,Can you summarize the medical consensus on treating or managing Risk factors stunting?,PPR_0ead318d,paraphrase
+141,"Menurut studi kesehatan, seberapa bahaya atau efektifkah Risk factors stunting?",PPR_0ead318d,user_style
+142,What are the main risk factors and clinical presentations of Estimating dengue force?,PPR_5fd7f7a2,direct
+143,Can you summarize the medical consensus on treating or managing Estimating dengue force?,PPR_5fd7f7a2,paraphrase
+144,Tindakan apa yang paling disarankan oleh dokter untuk menangani Estimating dengue force?,PPR_5fd7f7a2,user_style
+145,What are the main risk factors and clinical presentations of Immunogenicity Oral Rabies?,PPR_a33c3e05,direct
+146,Are there any notable complications or benefits linked to Immunogenicity Oral Rabies?,PPR_a33c3e05,paraphrase
+147,Adakah hubungan langsung antara Immunogenicity Oral Rabies dengan tingkat kesembuhan pasien?,PPR_a33c3e05,user_style
+148,What are the primary clinical outcomes associated with Prevalence Outcomes Infection?,PPR_01caf293,direct
+149,Are there any notable complications or benefits linked to Prevalence Outcomes Infection?,PPR_01caf293,paraphrase
+150,Adakah hubungan langsung antara Prevalence Outcomes Infection dengan tingkat kesembuhan pasien?,PPR_01caf293,user_style
+151,Which methodologies are most effective when investigating Genetic diversity multiplicity?,PPR_ad4e28a4,direct
+152,Does recent literature support the use of specific interventions for Genetic diversity multiplicity?,PPR_ad4e28a4,paraphrase
+153,Apa saja gejala atau hasil klinis yang biasanya terjadi pada kasus Genetic diversity multiplicity?,PPR_ad4e28a4,user_style
+154,Which methodologies are most effective when investigating Lifelong Anosmia Reveals?,PPR_0ad319fb,direct
+155,Are there any notable complications or benefits linked to Lifelong Anosmia Reveals?,PPR_0ad319fb,paraphrase
+156,"Menurut studi kesehatan, seberapa bahaya atau efektifkah Lifelong Anosmia Reveals?",PPR_0ad319fb,user_style
+157,What is the statistical significance and impact of Midwife competency training on patient health?,PPR_94ba6092,direct
+158,Are there any notable complications or benefits linked to Midwife competency training?,PPR_94ba6092,paraphrase
+159,Apakah ada penelitian terbaru yang membahas tentang Midwife competency training di Indonesia?,PPR_94ba6092,user_style
+160,Which methodologies are most effective when investigating Impact stigma community?,PPR_a07da915,direct
+161,Is there documented evidence showing how Impact stigma community affects health outcomes?,PPR_a07da915,paraphrase
+162,Adakah hubungan langsung antara Impact stigma community dengan tingkat kesembuhan pasien?,PPR_a07da915,user_style
+163,What is the statistical significance and impact of Submicroscopic Burden Zoonotic on patient health?,PPR_8ece1a6b,direct
+164,Does recent literature support the use of specific interventions for Submicroscopic Burden Zoonotic?,PPR_8ece1a6b,paraphrase
+165,"Menurut studi kesehatan, seberapa bahaya atau efektifkah Submicroscopic Burden Zoonotic?",PPR_8ece1a6b,user_style
+166,Which methodologies are most effective when investigating Enhancing Efavirenz Bioavailability?,PPR_f42478e0,direct
+167,How do medical professionals approach the diagnosis or intervention for Enhancing Efavirenz Bioavailability?,PPR_f42478e0,paraphrase
+168,"Menurut studi kesehatan, seberapa bahaya atau efektifkah Enhancing Efavirenz Bioavailability?",PPR_f42478e0,user_style
+169,What is the statistical significance and impact of Significant increase antiSARSCoV2 on patient health?,PPR_9ea9ca27,direct
+170,Is there documented evidence showing how Significant increase antiSARSCoV2 affects health outcomes?,PPR_9ea9ca27,paraphrase
+171,Bagaimana pandangan medis mengenai efek dari Significant increase antiSARSCoV2 terhadap pasien?,PPR_9ea9ca27,user_style
+172,Which methodologies are most effective when investigating Microarray patches managing?,PPR_1a099b3e,direct
+173,Are there any notable complications or benefits linked to Microarray patches managing?,PPR_1a099b3e,paraphrase
+174,Tindakan apa yang paling disarankan oleh dokter untuk menangani Microarray patches managing?,PPR_1a099b3e,user_style
+175,What are the key findings regarding Knowledge attitudes practices in recent studies?,PPR_925efcb7,direct
+176,Are there any notable complications or benefits linked to Knowledge attitudes practices?,PPR_925efcb7,paraphrase
+177,Adakah hubungan langsung antara Knowledge attitudes practices dengan tingkat kesembuhan pasien?,PPR_925efcb7,user_style
+178,How does current research evaluate the effectiveness of National Survey Adherence?,PPR_7294b4bb,direct
+179,What does the data say about the relationship between National Survey Adherence and patient recovery?,PPR_7294b4bb,paraphrase
+180,Bagaimana pandangan medis mengenai efek dari National Survey Adherence terhadap pasien?,PPR_7294b4bb,user_style
+181,What is the statistical significance and impact of Protein characterization isolate on patient health?,PPR_d2b43982,direct
+182,How do medical professionals approach the diagnosis or intervention for Protein characterization isolate?,PPR_d2b43982,paraphrase
+183,Tindakan apa yang paling disarankan oleh dokter untuk menangani Protein characterization isolate?,PPR_d2b43982,user_style
+184,What are the key findings regarding Challenges strategies implementing in recent studies?,PPR_c58e2d63,direct
+185,What does the data say about the relationship between Challenges strategies implementing and patient recovery?,PPR_c58e2d63,paraphrase
+186,Apa saja gejala atau hasil klinis yang biasanya terjadi pada kasus Challenges strategies implementing?,PPR_c58e2d63,user_style
+187,What are the primary clinical outcomes associated with Seroconversion children HBsAgpositive?,PPR_de2390ec,direct
+188,What does the data say about the relationship between Seroconversion children HBsAgpositive and patient recovery?,PPR_de2390ec,paraphrase
+189,Tindakan apa yang paling disarankan oleh dokter untuk menangani Seroconversion children HBsAgpositive?,PPR_de2390ec,user_style
+190,Which methodologies are most effective when investigating Neutrophil Extracellular Traps?,PPR_abc5673d,direct
+191,Does recent literature support the use of specific interventions for Neutrophil Extracellular Traps?,PPR_abc5673d,paraphrase
+192,Bagaimana pandangan medis mengenai efek dari Neutrophil Extracellular Traps terhadap pasien?,PPR_abc5673d,user_style
+193,What are the key findings regarding Methotrexate prednisolone erythema in recent studies?,PPR_8b50b099,direct
+194,How do medical professionals approach the diagnosis or intervention for Methotrexate prednisolone erythema?,PPR_8b50b099,paraphrase
+195,Apakah ada penelitian terbaru yang membahas tentang Methotrexate prednisolone erythema di Indonesia?,PPR_8b50b099,user_style
+196,What are the main risk factors and clinical presentations of Effectiveness NutritionSpecific Interventions?,PPR_8bc841fc,direct
+197,What does the data say about the relationship between Effectiveness NutritionSpecific Interventions and patient recovery?,PPR_8bc841fc,paraphrase
+198,"Menurut studi kesehatan, seberapa bahaya atau efektifkah Effectiveness NutritionSpecific Interventions?",PPR_8bc841fc,user_style
+199,How does current research evaluate the effectiveness of Triglyceride Glucose Index?,PPR_6b116a17,direct
+200,Is there documented evidence showing how Triglyceride Glucose Index affects health outcomes?,PPR_6b116a17,paraphrase
+201,Tindakan apa yang paling disarankan oleh dokter untuk menangani Triglyceride Glucose Index?,PPR_6b116a17,user_style
+202,How does current research evaluate the effectiveness of Oral Frailty Impact?,PPR_46be9b72,direct
+203,Does recent literature support the use of specific interventions for Oral Frailty Impact?,PPR_46be9b72,paraphrase
+204,Apakah ada penelitian terbaru yang membahas tentang Oral Frailty Impact di Indonesia?,PPR_46be9b72,user_style
+205,Which methodologies are most effective when investigating Stigma Associated COVID19?,PPR_f3268730,direct
+206,Is there documented evidence showing how Stigma Associated COVID19 affects health outcomes?,PPR_f3268730,paraphrase
+207,Tindakan apa yang paling disarankan oleh dokter untuk menangani Stigma Associated COVID19?,PPR_f3268730,user_style
+208,Which methodologies are most effective when investigating Piloting options assessment?,PPR_a255f05c,direct
+209,Is there documented evidence showing how Piloting options assessment affects health outcomes?,PPR_a255f05c,paraphrase
+210,"Menurut studi kesehatan, seberapa bahaya atau efektifkah Piloting options assessment?",PPR_a255f05c,user_style
+211,How does current research evaluate the effectiveness of Molecular docking thymoquinone?,PPR_20eacfbd,direct
+212,Is there documented evidence showing how Molecular docking thymoquinone affects health outcomes?,PPR_20eacfbd,paraphrase
+213,Apa saja gejala atau hasil klinis yang biasanya terjadi pada kasus Molecular docking thymoquinone?,PPR_20eacfbd,user_style
+214,What are the main risk factors and clinical presentations of water sanitation hygiene?,PPR_f203b685,direct
+215,Are there any notable complications or benefits linked to water sanitation hygiene?,PPR_f203b685,paraphrase
+216,Apakah ada penelitian terbaru yang membahas tentang water sanitation hygiene di Indonesia?,PPR_f203b685,user_style
+217,Which methodologies are most effective when investigating Placental damage comparison?,PPR_b11b2d9c,direct
+218,Can you summarize the medical consensus on treating or managing Placental damage comparison?,PPR_b11b2d9c,paraphrase
+219,Apakah ada penelitian terbaru yang membahas tentang Placental damage comparison di Indonesia?,PPR_b11b2d9c,user_style
+220,What are the key findings regarding Spatial Modeling leprosy in recent studies?,PPR_b966b0fa,direct
+221,What does the data say about the relationship between Spatial Modeling leprosy and patient recovery?,PPR_b966b0fa,paraphrase
+222,Adakah hubungan langsung antara Spatial Modeling leprosy dengan tingkat kesembuhan pasien?,PPR_b966b0fa,user_style
+223,Which methodologies are most effective when investigating Blood Lead Levels?,PPR_9d5580be,direct
+224,Can you summarize the medical consensus on treating or managing Blood Lead Levels?,PPR_9d5580be,paraphrase
+225,Bagaimana pandangan medis mengenai efek dari Blood Lead Levels terhadap pasien?,PPR_9d5580be,user_style
+226,What are the primary clinical outcomes associated with Population pharmacokinetics model?,PPR_74512ac5,direct
+227,What does the data say about the relationship between Population pharmacokinetics model and patient recovery?,PPR_74512ac5,paraphrase
+228,Bagaimana pandangan medis mengenai efek dari Population pharmacokinetics model terhadap pasien?,PPR_74512ac5,user_style
+229,How does current research evaluate the effectiveness of Analisis FaktorFaktor Risiko?,PPR_27c7d510,direct
+230,What does the data say about the relationship between Analisis FaktorFaktor Risiko and patient recovery?,PPR_27c7d510,paraphrase
+231,Bagaimana pandangan medis mengenai efek dari Analisis FaktorFaktor Risiko terhadap pasien?,PPR_27c7d510,user_style
+232,What are the primary clinical outcomes associated with Aspirin admitted hospital?,PPR_1d6f730e,direct
+233,How do medical professionals approach the diagnosis or intervention for Aspirin admitted hospital?,PPR_1d6f730e,paraphrase
+234,Adakah hubungan langsung antara Aspirin admitted hospital dengan tingkat kesembuhan pasien?,PPR_1d6f730e,user_style
+235,Which methodologies are most effective when investigating Investigating Impact Drinking?,PPR_64aab92d,direct
+236,Does recent literature support the use of specific interventions for Investigating Impact Drinking?,PPR_64aab92d,paraphrase
+237,Bagaimana pandangan medis mengenai efek dari Investigating Impact Drinking terhadap pasien?,PPR_64aab92d,user_style
+238,What are the primary clinical outcomes associated with Global Mapping Flavonoids?,PPR_ff7e9349,direct
+239,What does the data say about the relationship between Global Mapping Flavonoids and patient recovery?,PPR_ff7e9349,paraphrase
+240,Adakah hubungan langsung antara Global Mapping Flavonoids dengan tingkat kesembuhan pasien?,PPR_ff7e9349,user_style
+241,Which methodologies are most effective when investigating Enablers barriers scaling?,PPR_f565f790,direct
+242,Is there documented evidence showing how Enablers barriers scaling affects health outcomes?,PPR_f565f790,paraphrase
+243,Tindakan apa yang paling disarankan oleh dokter untuk menangani Enablers barriers scaling?,PPR_f565f790,user_style
+244,What are the main risk factors and clinical presentations of Uterine inversion retained?,PPR_976696ac,direct
+245,Can you summarize the medical consensus on treating or managing Uterine inversion retained?,PPR_976696ac,paraphrase
+246,Adakah hubungan langsung antara Uterine inversion retained dengan tingkat kesembuhan pasien?,PPR_976696ac,user_style
+247,What is the statistical significance and impact of Optimizing Dietary Concordance on patient health?,PPR_17ace87f,direct
+248,Are there any notable complications or benefits linked to Optimizing Dietary Concordance?,PPR_17ace87f,paraphrase
+249,Adakah hubungan langsung antara Optimizing Dietary Concordance dengan tingkat kesembuhan pasien?,PPR_17ace87f,user_style
+250,What is the statistical significance and impact of role cytokine family on patient health?,PPR_07e631ce,direct
+251,How do medical professionals approach the diagnosis or intervention for role cytokine family?,PPR_07e631ce,paraphrase
+252,Apa saja gejala atau hasil klinis yang biasanya terjadi pada kasus role cytokine family?,PPR_07e631ce,user_style
+253,What is the statistical significance and impact of Qualitative Maternal Mortality on patient health?,PPR_b234209a,direct
+254,Can you summarize the medical consensus on treating or managing Qualitative Maternal Mortality?,PPR_b234209a,paraphrase
+255,Apakah ada penelitian terbaru yang membahas tentang Qualitative Maternal Mortality di Indonesia?,PPR_b234209a,user_style
+256,How does current research evaluate the effectiveness of Molecular virology profiles?,PPR_4fb11d90,direct
+257,What does the data say about the relationship between Molecular virology profiles and patient recovery?,PPR_4fb11d90,paraphrase
+258,Tindakan apa yang paling disarankan oleh dokter untuk menangani Molecular virology profiles?,PPR_4fb11d90,user_style
+259,What are the primary clinical outcomes associated with Unwanted unintended effects?,PPR_2811603e,direct
+260,Does recent literature support the use of specific interventions for Unwanted unintended effects?,PPR_2811603e,paraphrase
+261,Bagaimana pandangan medis mengenai efek dari Unwanted unintended effects terhadap pasien?,PPR_2811603e,user_style
+262,What are the main risk factors and clinical presentations of Exploring multifactorial predictors?,PPR_b3bc082d,direct
+263,Is there documented evidence showing how Exploring multifactorial predictors affects health outcomes?,PPR_b3bc082d,paraphrase
+264,Tindakan apa yang paling disarankan oleh dokter untuk menangani Exploring multifactorial predictors?,PPR_b3bc082d,user_style
+265,What are the primary clinical outcomes associated with Intrauterine growth retardation?,PPR_15140204,direct
+266,What does the data say about the relationship between Intrauterine growth retardation and patient recovery?,PPR_15140204,paraphrase
+267,Adakah hubungan langsung antara Intrauterine growth retardation dengan tingkat kesembuhan pasien?,PPR_15140204,user_style
+268,Which methodologies are most effective when investigating Urbanrural differences incompleteness?,PPR_5467bb9e,direct
+269,How do medical professionals approach the diagnosis or intervention for Urbanrural differences incompleteness?,PPR_5467bb9e,paraphrase
+270,Tindakan apa yang paling disarankan oleh dokter untuk menangani Urbanrural differences incompleteness?,PPR_5467bb9e,user_style
+271,What are the key findings regarding Tumor Budding Significance in recent studies?,PPR_972c8a27,direct
+272,How do medical professionals approach the diagnosis or intervention for Tumor Budding Significance?,PPR_972c8a27,paraphrase
+273,Adakah hubungan langsung antara Tumor Budding Significance dengan tingkat kesembuhan pasien?,PPR_972c8a27,user_style
+274,What are the main risk factors and clinical presentations of Efficacy Communitybased Interventions?,PPR_1b873ac6,direct
+275,How do medical professionals approach the diagnosis or intervention for Efficacy Communitybased Interventions?,PPR_1b873ac6,paraphrase
+276,Apakah ada penelitian terbaru yang membahas tentang Efficacy Communitybased Interventions di Indonesia?,PPR_1b873ac6,user_style
+277,What are the key findings regarding Prevalence hepatitis viruses in recent studies?,PPR_0703adf5,direct
+278,What does the data say about the relationship between Prevalence hepatitis viruses and patient recovery?,PPR_0703adf5,paraphrase
+279,Apakah ada penelitian terbaru yang membahas tentang Prevalence hepatitis viruses di Indonesia?,PPR_0703adf5,user_style
+280,What is the statistical significance and impact of Role Digital Technology on patient health?,PPR_1e53d05e,direct
+281,Is there documented evidence showing how Role Digital Technology affects health outcomes?,PPR_1e53d05e,paraphrase
+282,Tindakan apa yang paling disarankan oleh dokter untuk menangani Role Digital Technology?,PPR_1e53d05e,user_style
+283,What are the main risk factors and clinical presentations of Mortality hospitalization heart?,PPR_1c7d66d3,direct
+284,Are there any notable complications or benefits linked to Mortality hospitalization heart?,PPR_1c7d66d3,paraphrase
+285,Apakah ada penelitian terbaru yang membahas tentang Mortality hospitalization heart di Indonesia?,PPR_1c7d66d3,user_style
+286,What are the key findings regarding Efficacy Safety Metformin in recent studies?,PPR_739b0cb8,direct
+287,How do medical professionals approach the diagnosis or intervention for Efficacy Safety Metformin?,PPR_739b0cb8,paraphrase
+288,Tindakan apa yang paling disarankan oleh dokter untuk menangani Efficacy Safety Metformin?,PPR_739b0cb8,user_style
+289,What is the statistical significance and impact of Serological crossreaction coinfection on patient health?,PPR_87715171,direct
+290,How do medical professionals approach the diagnosis or intervention for Serological crossreaction coinfection?,PPR_87715171,paraphrase
+291,Bagaimana pandangan medis mengenai efek dari Serological crossreaction coinfection terhadap pasien?,PPR_87715171,user_style
+292,What are the primary clinical outcomes associated with socioecological model management?,PPR_9e39ba39,direct
+293,Does recent literature support the use of specific interventions for socioecological model management?,PPR_9e39ba39,paraphrase
+294,Apakah ada penelitian terbaru yang membahas tentang socioecological model management di Indonesia?,PPR_9e39ba39,user_style
+295,What is the statistical significance and impact of Serological evidence West on patient health?,PPR_63a19ac1,direct
+296,Is there documented evidence showing how Serological evidence West affects health outcomes?,PPR_63a19ac1,paraphrase
+297,"Menurut studi kesehatan, seberapa bahaya atau efektifkah Serological evidence West?",PPR_63a19ac1,user_style
+298,What are the key findings regarding Paradox Stunting Differences in recent studies?,PPR_ab24bf45,direct
+299,Is there documented evidence showing how Paradox Stunting Differences affects health outcomes?,PPR_ab24bf45,paraphrase
+300,"Menurut studi kesehatan, seberapa bahaya atau efektifkah Paradox Stunting Differences?",PPR_ab24bf45,user_style
+301,How does current research evaluate the effectiveness of Kebijakan Nabi Muhammad?,PPR_322c4bf2,direct
+302,How do medical professionals approach the diagnosis or intervention for Kebijakan Nabi Muhammad?,PPR_322c4bf2,paraphrase
+303,Tindakan apa yang paling disarankan oleh dokter untuk menangani Kebijakan Nabi Muhammad?,PPR_322c4bf2,user_style
+304,What are the main risk factors and clinical presentations of Leprosy perceptions knowledge?,PPR_fa268347,direct
+305,Are there any notable complications or benefits linked to Leprosy perceptions knowledge?,PPR_fa268347,paraphrase
+306,Apa saja gejala atau hasil klinis yang biasanya terjadi pada kasus Leprosy perceptions knowledge?,PPR_fa268347,user_style
+307,What are the key findings regarding Parenteral Nutrition Eating in recent studies?,PPR_1dde407d,direct
+308,Can you summarize the medical consensus on treating or managing Parenteral Nutrition Eating?,PPR_1dde407d,paraphrase
+309,"Menurut studi kesehatan, seberapa bahaya atau efektifkah Parenteral Nutrition Eating?",PPR_1dde407d,user_style
+310,Which methodologies are most effective when investigating lifestyles health outcomes?,PPR_14c527e5,direct
+311,Is there documented evidence showing how lifestyles health outcomes affects health outcomes?,PPR_14c527e5,paraphrase
+312,Bagaimana pandangan medis mengenai efek dari lifestyles health outcomes terhadap pasien?,PPR_14c527e5,user_style
+313,Which methodologies are most effective when investigating global regional national?,PPR_adbdfdeb,direct
+314,What does the data say about the relationship between global regional national and patient recovery?,PPR_adbdfdeb,paraphrase
+315,Apa saja gejala atau hasil klinis yang biasanya terjadi pada kasus global regional national?,PPR_adbdfdeb,user_style
+316,What are the main risk factors and clinical presentations of Environmental enteric dysfunction?,PPR_56684027,direct
+317,Are there any notable complications or benefits linked to Environmental enteric dysfunction?,PPR_56684027,paraphrase
+318,Adakah hubungan langsung antara Environmental enteric dysfunction dengan tingkat kesembuhan pasien?,PPR_56684027,user_style
+319,Which methodologies are most effective when investigating Effectiveness repellent patchouli?,PPR_4fe0bae0,direct
+320,Are there any notable complications or benefits linked to Effectiveness repellent patchouli?,PPR_4fe0bae0,paraphrase
+321,Apa saja gejala atau hasil klinis yang biasanya terjadi pada kasus Effectiveness repellent patchouli?,PPR_4fe0bae0,user_style
+322,What are the primary clinical outcomes associated with Development evaluation blended?,PPR_8b551153,direct
+323,Is there documented evidence showing how Development evaluation blended affects health outcomes?,PPR_8b551153,paraphrase
+324,Tindakan apa yang paling disarankan oleh dokter untuk menangani Development evaluation blended?,PPR_8b551153,user_style
+325,What are the key findings regarding Herbal combination Moringa in recent studies?,PPR_eefb5963,direct
+326,How do medical professionals approach the diagnosis or intervention for Herbal combination Moringa?,PPR_eefb5963,paraphrase
+327,Tindakan apa yang paling disarankan oleh dokter untuk menangani Herbal combination Moringa?,PPR_eefb5963,user_style
+328,What are the key findings regarding Algorithmassisted interpretation cyclic in recent studies?,PPR_4293e0c5,direct
+329,What does the data say about the relationship between Algorithmassisted interpretation cyclic and patient recovery?,PPR_4293e0c5,paraphrase
+330,Tindakan apa yang paling disarankan oleh dokter untuk menangani Algorithmassisted interpretation cyclic?,PPR_4293e0c5,user_style
+331,What are the primary clinical outcomes associated with Urological Association Asia?,PPR_7ecbe3c6,direct
+332,Are there any notable complications or benefits linked to Urological Association Asia?,PPR_7ecbe3c6,paraphrase
+333,Tindakan apa yang paling disarankan oleh dokter untuk menangani Urological Association Asia?,PPR_7ecbe3c6,user_style
+334,How does current research evaluate the effectiveness of NurseLed Psychoeducational Interventions?,PPR_30d72266,direct
+335,How do medical professionals approach the diagnosis or intervention for NurseLed Psychoeducational Interventions?,PPR_30d72266,paraphrase
+336,"Menurut studi kesehatan, seberapa bahaya atau efektifkah NurseLed Psychoeducational Interventions?",PPR_30d72266,user_style
+337,Which methodologies are most effective when investigating Mapping million neonatal?,PPR_c2aa7c3c,direct
+338,Is there documented evidence showing how Mapping million neonatal affects health outcomes?,PPR_c2aa7c3c,paraphrase
+339,Bagaimana pandangan medis mengenai efek dari Mapping million neonatal terhadap pasien?,PPR_c2aa7c3c,user_style
+340,What are the overarching clinical guidelines and recent findings for managing Pediatrics cases?,"""PPR_d20717b4"", ""PPR_1d07f23c"", ""PPR_7da3caaa"", ""PPR_0ead318d""",multi_papers
+341,What are the overarching clinical guidelines and recent findings for managing Oncology cases?,"""PPR_076be8b3"", ""PPR_f6adf40b""",multi_papers
+342,What are the overarching clinical guidelines and recent findings for managing Obstetrics and Gynecology cases?,"""PPR_11e1dc0a"", ""PPR_fd01adc2"", ""PPR_3c56fba0"", ""PPR_e4e4d74e""",multi_papers
+343,What are the overarching clinical guidelines and recent findings for managing Cardiology cases?,"""PPR_b68775b2"", ""PPR_1c7d66d3"", ""PPR_4293e0c5""",multi_papers
+344,What are the overarching clinical guidelines and recent findings for managing Malaria cases?,"""PPR_bc8aed42"", ""PPR_8ece1a6b"", ""PPR_a255f05c""",multi_papers
+345,What are the overarching clinical guidelines and recent findings for managing Endocrinology cases?,"""PPR_f9dae6d5"", ""PPR_739b0cb8""",multi_papers
+346,What are the overarching clinical guidelines and recent findings for managing Infectious Diseases cases?,"""PPR_b3553abb"", ""PPR_05d342af"", ""PPR_1a099b3e"", ""PPR_87715171""",multi_papers
+347,What are the overarching clinical guidelines and recent findings for managing Public Health cases?,"""PPR_4207d007"", ""PPR_94ba6092"", ""PPR_c58e2d63"", ""PPR_b966b0fa""",multi_papers
+348,What are the overarching clinical guidelines and recent findings for managing Endocrinology/Diabetes cases?,"""PPR_7294b4bb"", ""PPR_6b116a17"", ""PPR_1b873ac6"", ""PPR_30d72266""",multi_papers
