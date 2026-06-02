@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import os
-os.environ["HF_HOME"] = "F:/HuggingFace_Cache"
-os.environ["SENTENCE_TRANSFORMERS_HOME"] = "F:/HuggingFace_Cache"
+os.environ["HF_HOME"] = "D:/HuggingFace_Cache"
+os.environ["SENTENCE_TRANSFORMERS_HOME"] = "D:/HuggingFace_Cache"
 from pathlib import Path
 
 # ==========================================
