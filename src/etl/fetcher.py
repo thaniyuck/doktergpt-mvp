@@ -4,7 +4,7 @@ import time
 import requests
 import xml.etree.ElementTree as ET
 
-# --- CONFIGURATION ---
+# --- CONFIGURATION (Kept exactly as G Drive) ---
 DRIVE_BASE = "G:/My Drive/dokterGPT_Data" 
 MD_DIR = os.path.join(DRIVE_BASE, "parsed_md")
 os.makedirs(MD_DIR, exist_ok=True)
@@ -14,9 +14,9 @@ ESEARCH_URL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi"
 EFETCH_URL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
 
 def fetch_top_indonesian_clinical_research(search_query, max_results=5, page=1):
-    # Modify the query to enforce the Indonesian context and require an abstract
+    # Tier 1: Enforce strict Indonesian context
     pubmed_query = f"({search_query}) AND Indonesia[Affiliation] AND hasabstract[text]"
-    print(f"🔍 Searching PubMed for: '{pubmed_query}'...")
+    print(f"🔍 Searching PubMed (Indonesian Affiliation) for: '{pubmed_query}'...")
     
     # STEP 1: Search for PMIDs
     search_params = {
@@ -34,6 +34,20 @@ def fetch_top_indonesian_clinical_research(search_query, max_results=5, page=1):
     except Exception as e:
         print(f"❌ PubMed Search Error: {e}")
         return []
+
+    # 🌟 LAYERED FALLBACK: Drop geographic restriction if 0 hits are found
+    if not id_list:
+        print("⚠️ No Indonesian-affiliated papers found. Relaxing constraints to Global PubMed Search...")
+        pubmed_query_global = f"({search_query}) AND hasabstract[text]"
+        search_params["term"] = pubmed_query_global
+        
+        try:
+            search_response = requests.get(ESEARCH_URL, params=search_params)
+            search_response.raise_for_status()
+            id_list = search_response.json().get("esearchresult", {}).get("idlist", [])
+        except Exception as e:
+            print(f"❌ PubMed Global Search Error: {e}")
+            return []
 
     if not id_list:
         return []

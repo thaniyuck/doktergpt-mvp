@@ -1,0 +1,4 @@
+Chunking Strategy,Total Chunks,Recall@5,Ctx Precision,NDCG@5,Hit Rate
+Recursive Small (400c),4520,0.788,0.68,0.704,0.796
+Semantic Chunking (MiniLM),1682,0.774,0.677,0.699,0.784
+Recursive Large (1000c),2239,0.77,0.663,0.688,0.779

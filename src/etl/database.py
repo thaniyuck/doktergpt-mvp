@@ -4,31 +4,34 @@ import uuid
 import csv
 import psycopg2
 import gspread
-import nltk
+import time
+import warnings
+import torch
 from sentence_transformers import SentenceTransformer
 from src.config import CREDENTIALS_PATH
 
-# Download NLTK models for semantic chunking
-nltk.download('punkt', quiet=True)
-nltk.download('punkt_tab', quiet=True)
-from nltk.tokenize import sent_tokenize
+# --- LangChain Semantic Chunker Imports ---
+from langchain_experimental.text_splitter import SemanticChunker
+from langchain_huggingface import HuggingFaceEmbeddings
+
+warnings.filterwarnings("ignore")
 
 # =====================================================================
-# 1. CONFIGURATION & FILE PATHS (VS CODE LOCAL SETUP)
+# 1. CONFIGURATION & FILE PATHS
 # =====================================================================
-# Adjust this path depending on Windows (G:/My Drive/...) or Mac (/Users/Name/Google Drive/...)
+OVERWRITE_MODE = False  # 🛑 KEEP FALSE so we never wipe the 875 historical papers!
+
 DRIVE_BASE = "G:/My Drive/dokterGPT_Data" 
 JSON_DIR = os.path.join(DRIVE_BASE, "extracted_json")
 MD_DIR = os.path.join(DRIVE_BASE, "parsed_md")
 SCIMAGO_PATH = os.path.join(DRIVE_BASE, "scimago.csv")
 
 GSHEET_NAME = 'dokterGPT_Database'
-# 🛑 PASTE YOUR SUPABASE CONNECTION POOLER STRING HERE:
 DB_URL = "postgresql://postgres.cviumnakesybhqiuwdij:doktergpt123@aws-1-ap-southeast-1.pooler.supabase.com:6543/postgres"
 
 def gen_id(prefix): return f"{prefix}_{uuid.uuid4().hex[:8]}"
 
-print("🧠 Loading BAAI/bge-m3 (Multilingual Embedding Model)...")
+print("🧠 Loading BAAI/bge-m3 (For Supabase Vectors)...")
 embedder = SentenceTransformer('BAAI/bge-m3')
 
 # =====================================================================
@@ -39,7 +42,6 @@ scimago_ranks = {}
 
 if os.path.exists(SCIMAGO_PATH):
     with open(SCIMAGO_PATH, mode='r', encoding='utf-8') as f:
-        # SCImago uses semicolons as delimiters in their CSVs
         reader = csv.DictReader(f, delimiter=';') 
         for row in reader:
             title = row.get('Title', '').strip().lower()
@@ -47,49 +49,41 @@ if os.path.exists(SCIMAGO_PATH):
             if title and q_rank:
                 scimago_ranks[title] = q_rank
 else:
-    print(f"⚠️ SCImago file not found at {SCIMAGO_PATH}. All new journals will default to Tier 5.")
+    print(f"⚠️ SCImago file not found at {SCIMAGO_PATH}. Defaulting to Tier 5.")
 
 def get_scimago_tier(journal_name):
-    """Maps SCImago Q-Ranks to your 1-5 Trust Tier System"""
     clean_name = journal_name.strip().lower()
     rank = scimago_ranks.get(clean_name, "Unranked")
-    
     if rank == 'Q1': return "1"
     elif rank == 'Q2': return "2"
     elif rank == 'Q3': return "3"
     elif rank == 'Q4': return "4"
-    else: return "5"  # Unranked / Local / Unknown
+    else: return "5"  
 
 # =====================================================================
-# 3. CHUNKING ENGINE (Semantic Sentence Chunking)
+# 3. CHUNKING ENGINE (MiniLM Semantic Chunker for FUTURE papers)
 # =====================================================================
-def semantic_chunk_text(text, max_words=200):
-    paragraphs = text.split('\n\n')
-    chunks = []
-    current_chunk = ""
-    current_word_count = 0
+# Auto-detects if you have a GPU, otherwise uses CPU (which is perfectly fine for 1-3 new papers)
+device_target = "cuda" if torch.cuda.is_available() else "cpu"
+print(f"🧠 Loading all-MiniLM-L6-v2 (For Semantic Text Slicing) on {device_target.upper()}...")
 
-    for para in paragraphs:
-        para = para.strip()
-        if not para: continue
+semantic_embeddings = HuggingFaceEmbeddings(
+    model_name="all-MiniLM-L6-v2",
+    model_kwargs={"device": device_target}
+)
 
-        sentences = sent_tokenize(para)
-        for sentence in sentences:
-            sentence_words = len(sentence.split())
-            if current_word_count + sentence_words > max_words and current_chunk:
-                chunks.append(current_chunk.strip())
-                current_chunk = sentence
-                current_word_count = sentence_words
-            else:
-                current_chunk += " " + sentence if current_chunk else sentence
-                current_word_count += sentence_words
+semantic_chunker = SemanticChunker(
+    semantic_embeddings, 
+    breakpoint_threshold_type="percentile"
+)
 
-        if current_chunk: current_chunk += "\n\n"
-
-    if current_chunk.strip():
-        chunks.append(current_chunk.strip())
-
-    return chunks
+def semantic_chunk_text(text):
+    """Uses AI to detect topic changes and split paragraphs perfectly."""
+    try:
+        return semantic_chunker.split_text(text)
+    except Exception as e:
+        print(f"⚠️ Chunking error: {e}")
+        return [text]
 
 # =====================================================================
 # 4. POSTGRES & PGVECTOR SETUP
@@ -120,12 +114,11 @@ def setup_postgres():
     return conn, cursor
 
 # =====================================================================
-# 5. GOOGLE SHEETS SETUP (VS CODE LOCAL)
+# 5. GOOGLE SHEETS SETUP
 # =====================================================================
 def get_gsheets_worksheets():
     print("🔐 Authenticating with Google Sheets locally...")
     try:
-        # Assumes you have downloaded a Google Cloud Service Account JSON named 'credentials.json'
         gc = gspread.service_account(filename=str(CREDENTIALS_PATH))
         sh = gc.open(GSHEET_NAME)
         return {
@@ -137,7 +130,7 @@ def get_gsheets_worksheets():
             "chunks": sh.worksheet("chunks")
         }, sh.url
     except Exception as e:
-        print(f"❌ Google Sheets Error: Ensure 'credentials.json' is in this folder and the sheet is shared with its email. Error: {e}")
+        print(f"❌ Google Sheets Error: {e}")
         return None, None
 
 # =====================================================================
@@ -173,7 +166,7 @@ def push_to_databases():
 
             raw_title = data.get('title', '').strip()
 
-            # Check Postgres Deduplication
+            # Check Postgres Deduplication (Instantly skips the 875 old ones!)
             cursor.execute('SELECT paper_id FROM papers WHERE LOWER(title) = LOWER(%s)', (raw_title,))
             if cursor.fetchone():
                 print(f"   ⏭️ Skipping fully synced duplicate: {raw_title[:50]}...")
@@ -186,8 +179,6 @@ def push_to_databases():
             # --- DYNAMIC SOURCE W/ SCIMAGO OVERRIDE ---
             source_data = data.get('source', {})
             source_name = str(source_data.get('name', 'Unknown Local PDF'))
-            
-            # 🌟 OVERRIDE THE AI'S TIER WITH SCIMAGO FACTS 🌟
             calculated_tier = get_scimago_tier(source_name)
 
             cursor.execute('SELECT source_id FROM sources WHERE name = %s', (source_name,))
@@ -248,7 +239,7 @@ def push_to_databases():
                     payloads["paper_keywords"].append([paper_id, kw_id])
 
             # =========================================================
-            # 🌟 PARALLEL CHUNKING & EMBEDDING 🌟
+            # 🌟 PARALLEL CHUNKING & EMBEDDING (Now uses MiniLM!) 🌟
             # =========================================================
             md_filename = file.replace('.json', '.md')
             md_filepath = os.path.join(MD_DIR, md_filename)
@@ -257,8 +248,9 @@ def push_to_databases():
                 with open(md_filepath, 'r', encoding='utf-8') as md_file:
                     raw_text = md_file.read()
 
+                # Passes text through the new AI semantic chunker
                 chunks = semantic_chunk_text(raw_text)
-                print(f"     🧩 Generating {len(chunks)} vector embeddings for {md_filename}...")
+                print(f"     🧩 Generating {len(chunks)} Semantic AI vector embeddings for {md_filename}...")
                 embeddings = embedder.encode(chunks)
 
                 for i, (chunk_txt, embed_vector) in enumerate(zip(chunks, embeddings)):
@@ -287,8 +279,8 @@ def push_to_databases():
             tabs[tab_name].append_rows(payload)
             print(f"   ✅ Appended {len(payload)} rows to '{tab_name}'")
 
-    if success_count > 0: print(f"\n🎉 SUCCESS! Processed {success_count} papers.")
-    else: print("\n✅ All databases are up to date.")
+    if success_count > 0: print(f"\n🎉 SUCCESS! Processed {success_count} NEW papers with Semantic Chunking.")
+    else: print("\n✅ All databases are up to date. No new papers to chunk.")
 
 if __name__ == "__main__":
     push_to_databases()
